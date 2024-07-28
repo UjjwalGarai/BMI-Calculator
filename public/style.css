@@ -1,0 +1,119 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #146aeb;
+}
+
+#formPanel {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"] {
+    width: calc(50% - 20px);
+    padding: 10px;
+    margin: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#height-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.resultPanel {
+    background-color: #e9f7ef;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.resultHeader {
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.suggestions {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+.errorResult {
+    background-color: #f8d7da;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #721c24;
+}
+
+
+@media (max-width: 600px) {
+    #formPanel {
+        padding: 15px;
+    }
+
+    label, input[type="number"], button[type="submit"] {
+        font-size: 14px;
+    }
+
+    #height-inputs {
+        flex-direction: column;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

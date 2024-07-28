@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div class="header">Check Your BMI using Weight and Height</div>
+
+    <form action="/submit" method="post" id="formPanel">
+        <label for="weight">Enter Your Weight: </label>
+        <input type="number" name="weight" id="weight"> <br>
+        <label for="height">Enter Your Height</label>
+        <div id="height-inputs">
+            <div>
+                <label for="feet">Feet: </label>
+                <input type="number" name="feet" id="feet">
+            </div>
+            <div>
+                <label for="inch">Inches: </label>
+                <input type="number" name="inch" id="inch">
+            </div>
+        </div>
+        <button type="submit">Check Your Result</button>
+    </form>
+    <!-- <div>Your BMI value is <%= bmiValue %></div> -->
+    <% if (typeof bmiValue !== 'undefined') { %>
+        <% if (bmiValue >= 0 && bmiValue <= 60) { %>
+            <div class="resultPanel">
+                <div class="resultHeader">We have done Your analysis</div>
+                Based on your input, your BMI value is <%= bmiValue %> and Your are under category of <i> <%= bmiStatus %></i>
+            
+            <div class="suggestions"> Suggestions: <%= suggestion %></div>
+        </div>
+        <% } else { %>
+            <div class="errorResult">Hey, something is wrong with your input value. Please check it again.</div>
+        <% } %>
+    <% } %>
+    
+</body>
+</html>
